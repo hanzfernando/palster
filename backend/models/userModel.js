@@ -30,7 +30,8 @@ const userSchema = new mongoose.Schema(
             type: String,
         },
         avatar: {
-            type
+            type: String,
+            default: 'https://drive.google.com/file/d/1RGRmjbYkF7zYIYRbQjg7FQbhFLDCsASZ/view?usp=sharing',
         }
     },
     {
