@@ -3,10 +3,6 @@ import bcrypt from 'bcrypt';
 
 const userSchema = new mongoose.Schema(
     {
-        name: {
-            type: String,
-            required: true,
-        },
         email: {
             type: String,
             required: true,
@@ -29,10 +25,32 @@ const userSchema = new mongoose.Schema(
         verificationToken: {
             type: String,
         },
+        name: {
+            type: String,
+            required: true,
+        },
         avatar: {
             type: String,
             default: 'https://drive.google.com/file/d/1RGRmjbYkF7zYIYRbQjg7FQbhFLDCsASZ/view?usp=sharing',
-        }
+        },
+        friends: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'User',
+            },
+        ],
+        friendRequests: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'User',
+            },
+        ],
+        sentRequests: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'User',
+            },
+        ],
     },
     {
         timestamps: true
