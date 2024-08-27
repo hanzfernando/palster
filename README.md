@@ -1,2 +1,2 @@
 # palster
-An app that simulates a simple social media app
+A simple social media app using the MERN stack, jwt, nodemailer, tailwindcss
