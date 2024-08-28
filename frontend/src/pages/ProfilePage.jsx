@@ -1,8 +1,7 @@
 import CreatePostForm from '../components/CreatePostForm'; 
 import PostFeed from '../components/PostFeed';
 import { useAuthContext } from '../hooks/useAuthContext'; 
-import defaultCoverPhoto from '../assets/default-cover.png'; 
-import defaultAvatar from '../assets/default-avatar.png';
+
 
 const ProfilePage = () => {
     const { user } = useAuthContext(); // Get the current user from context
@@ -14,13 +13,13 @@ const ProfilePage = () => {
                 {/* Cover Photo */}
                 <div className="relative">
                     <img
-                        src={user.coverPhoto || defaultCoverPhoto}
+                        src={user.coverPhoto}
                         alt="Cover Photo"
                         className="w-full max-h-42 object-cover"
                     />
                     {/* Avatar Picture */}
                     <img
-                        src={user.avatar || defaultAvatar}
+                        src={user.avatar}
                         alt="User Avatar"
                         className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-36 h-36 rounded-full border-4 border-white"
                     />

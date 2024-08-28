@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
 import  defaultAvatar  from '../../frontend/src/assets/defaultAvatar.js';
+import defaultCoverPhoto from '../../frontend/src/assets/defaultCoverPhoto.js';
 
 const userSchema = new mongoose.Schema(
     {
@@ -33,6 +34,10 @@ const userSchema = new mongoose.Schema(
         avatar: {
             type: String,
             default: defaultAvatar
+        },
+        coverPhoto: {
+            type: String,
+            default: defaultCoverPhoto
         },
         friends: [
             {

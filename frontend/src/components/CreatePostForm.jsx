@@ -4,7 +4,6 @@ import { FaCamera } from 'react-icons/fa';
 import { useAuthContext } from '../hooks/useAuthContext';
 import { usePostContext } from '../hooks/usePostContext';
 import { createPost } from '../services/postService';
-import defaultAvatar from '../assets/default-avatar.png';
 
 const CreatePostForm = () => {
   const [content, setContent] = useState('');
@@ -69,7 +68,7 @@ const CreatePostForm = () => {
         {/* Content with Avatar */}
         <div className="flex items-start mb-4">
           <img
-            src={user.avatar || defaultAvatar} 
+            src={user.avatar} 
             alt="User Avatar"
             className="w-12 h-12 rounded-full object-cover mr-4"
           />

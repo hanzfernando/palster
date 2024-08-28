@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom'
 import { useAuthContext } from '../hooks/useAuthContext'
 import { FaSignOutAlt } from 'react-icons/fa'
 import { useLogout } from '../hooks/useLogout'
-import defaultAvatar from '../assets/default-avatar.png';
 
 const Navbar = () => {
     const { user } = useAuthContext()
