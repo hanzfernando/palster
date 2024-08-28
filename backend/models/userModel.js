@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
+import  defaultAvatar  from '../../frontend/src/assets/defaultAvatar.js';
 
 const userSchema = new mongoose.Schema(
     {
@@ -31,7 +32,7 @@ const userSchema = new mongoose.Schema(
         },
         avatar: {
             type: String,
-            default: 'https://drive.google.com/file/d/1RGRmjbYkF7zYIYRbQjg7FQbhFLDCsASZ/view?usp=sharing',
+            default: defaultAvatar
         },
         friends: [
             {
